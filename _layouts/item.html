@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<article class="content-article">
+
+    <header class="article-header">
+        <p class="article-category">{{ page.category | default: page.collection | capitalize }}</p>
+
+        <h1>{{ page.title }}</h1>
+
+        {% if page.date %}
+        <p class="article-date">{{ page.date | date: "%d %B %Y" }}</p>
+        {% endif %}
+
+        {% if page.description %}
+        <p class="article-description">{{ page.description }}</p>
+        {% endif %}
+    </header>
+
+    <div class="article-content">
+        {{ content }}
+    </div>
+
+    <a class="back-link" href="{{ '/' | relative_url }}">← Back to home</a>
+
+</article>

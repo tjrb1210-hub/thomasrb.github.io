@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}?v=5">
+</head>
+
+<body>
+
+    <header>
+        <a class="site-title" href="{{ '/' | relative_url }}">
+            Thomas Rodriguez Brown
+        </a>
+
+        <nav>
+            <a href="{{ '/' | relative_url }}">Home</a>
+            <a href="{{ '/projects/' | relative_url }}">Projects</a>
+            <a href="{{ '/writing/' | relative_url }}">Writing</a>
+            <a href="{{ '/classroom/' | relative_url }}">Classroom</a>
+            <a href="{{ '/interests/' | relative_url }}">Interests</a>
+            <a href="{{ '/about/' | relative_url }}">About</a>
+            <a href="{{ '/learning-log/' | relative_url }}">Learning Log</a>
+        </nav>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <p>Thomas Rodriguez Brown · 2026</p>
+        <p>Language, ideas and other inquiries.</p>
+    </footer>
+
+</body>
+</html>

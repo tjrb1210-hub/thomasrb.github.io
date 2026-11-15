@@ -1,0 +1,48 @@
+
+title: "Thomas Rodriguez Brown"
+description: "Projects, writing and explorations across language, education, technology and society."
+
+url: "https://tjrb1210-hub.github.io"
+baseurl: ""
+
+markdown: kramdown
+permalink: /:categories/:title/
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  classroom:
+    output: true
+    permalink: /classroom/:name/
+  writing:
+    output: true
+    permalink: /writing/:name/
+  interests:
+    output: true
+    permalink: /interests/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "item"
+  - scope:
+      path: ""
+      type: "classroom"
+    values:
+      layout: "item"
+  - scope:
+      path: ""
+      type: "writing"
+    values:
+      layout: "item"
+  - scope:
+      path: ""
+      type: "interests"
+    values:
+      layout: "item"
+
+plugins:
+  - jekyll-feed

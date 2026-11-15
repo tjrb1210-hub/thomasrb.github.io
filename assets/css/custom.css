@@ -1,0 +1,514 @@
+
+/* =================================
+   THOMAS RODRIGUEZ BROWN
+   Personal Website
+   ================================= */
+
+:root {
+  --pink: #F20B83;
+  --blue: #142B78;
+  --yellow: #E8BD27;
+  --green: #356B45;
+  --black: #111111;
+  --white: #FFFFFF;
+  --page-width: 1120px;
+}
+
+/* Base */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--black);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+/* Header and navigation */
+
+header {
+  width: 100%;
+  padding: 28px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+header h1,
+header .site-title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+nav a {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+nav a:hover {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+/* Main content */
+
+main {
+  width: 90%;
+  max-width: var(--page-width);
+  margin: 65px auto;
+  min-height: 65vh;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  max-width: 720px;
+}
+
+/* Content links */
+
+main a:not(.home-tile):not(.project-entry) {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+main a:not(.home-tile):not(.project-entry):hover {
+  background: var(--yellow);
+  color: var(--black);
+  text-decoration: none;
+}
+
+/* Content panels and cards */
+
+.card,
+.project-card,
+.post-card,
+.content-card {
+  padding: 28px;
+  background: #F5F5F5;
+  border: none;
+  border-radius: 0;
+}
+
+.pink {
+  background: var(--pink);
+  color: var(--white);
+}
+
+.blue {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.yellow {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+.green {
+  background: var(--green);
+  color: var(--white);
+}
+
+/* =================================
+   HOMEPAGE
+   ================================= */
+
+.intro {
+  padding: 45px 0 65px;
+}
+
+.intro > p:first-child {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.intro h2 {
+  max-width: 850px;
+  margin: 30px 0;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+}
+
+.intro > p:last-child {
+  max-width: 560px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Homepage grid */
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+
+.home-tile {
+  min-height: 230px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.home-tile:hover {
+  transform: translateY(-4px);
+  color: inherit;
+  opacity: 0.92;
+}
+
+.home-tile span {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.home-tile h3 {
+  max-width: 350px;
+  margin: 35px 0 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+/* =================================
+   PROJECTS PAGE
+   ================================= */
+
+.page-intro {
+  padding: 45px 0 65px;
+}
+
+.page-intro > p:first-child {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.page-intro h1 {
+  max-width: 900px;
+  margin: 30px 0;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+}
+
+.page-intro > p:last-child {
+  max-width: 600px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Project entries */
+
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.project-entry {
+  min-height: 240px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #F2F2F2;
+  color: var(--black);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.project-entry:nth-child(4n + 1) {
+  background: var(--pink);
+  color: var(--white);
+}
+
+.project-entry:nth-child(4n + 2) {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.project-entry:nth-child(4n + 3) {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+.project-entry:nth-child(4n + 4) {
+  background: var(--green);
+  color: var(--white);
+}
+
+.project-entry span {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.project-entry h2 {
+  margin: 35px 0 12px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.project-entry p {
+  margin-bottom: 24px;
+  max-width: 420px;
+}
+
+.project-entry:hover {
+  opacity: 0.88;
+  color: inherit;
+}
+
+/* Footer */
+
+footer {
+  padding: 30px 5%;
+  font-size: 0.85rem;
+}
+
+/* =================================
+   MOBILE
+   ================================= */
+
+@media (max-width: 700px) {
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 24px 5%;
+  }
+
+  nav {
+    gap: 16px;
+  }
+
+  main {
+    margin: 40px auto;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .intro {
+    padding: 25px 0 45px;
+  }
+
+  .intro h2 {
+    font-size: 3.5rem;
+  }
+
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-tile {
+    min-height: 190px;
+  }
+
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .page-intro h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* LEXICON ANALYSER */
+
+.lexicon-app {
+    margin: 50px 0;
+}
+
+.lexicon-heading {
+    margin-bottom: 30px;
+}
+
+.lexicon-heading h2,
+.lexicon-result-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.lexicon-app label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#lexicon-input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 2px solid #142B78;
+    border-radius: 0;
+    font: inherit;
+    font-size: 16px;
+    resize: vertical;
+    background: #FFFFFF;
+    color: #111111;
+}
+
+#lexicon-input:focus {
+    outline: 3px solid #F20B83;
+    outline-offset: 2px;
+}
+
+.lexicon-controls {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.lexicon-controls button {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 0;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#analyse-button {
+    background: #142B78;
+    color: #FFFFFF;
+}
+
+#analyse-button:hover {
+    background: #F20B83;
+}
+
+#clear-button {
+    background: #E8BD27;
+    color: #111111;
+}
+
+#lexicon-status {
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.lexicon-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin: 35px 0;
+}
+
+.lexicon-stat {
+    background: #142B78;
+    color: #FFFFFF;
+    padding: 25px;
+}
+
+.lexicon-stat:nth-child(2) {
+    background: #F20B83;
+}
+
+.lexicon-stat:nth-child(3) {
+    background: #E8BD27;
+    color: #111111;
+}
+
+.lexicon-stat span {
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.lexicon-stat strong {
+    display: block;
+    font-size: 36px;
+}
+
+.lexicon-result-section {
+    margin: 45px 0;
+}
+
+.lexicon-table-wrapper {
+    overflow-x: auto;
+}
+
+.lexicon-result-section table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.lexicon-result-section th,
+.lexicon-result-section td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.lexicon-result-section th {
+    background: #142B78;
+    color: #FFFFFF;
+}
+
+.lexicon-result-section tbody tr:nth-child(even) {
+    background: #f5f5f5;
+}
+
+#rare-results {
+    padding-left: 22px;
+    line-height: 2;
+}
+
+@media (max-width: 700px) {
+    .lexicon-stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lexicon-stat {
+        padding: 20px;
+    }
+}

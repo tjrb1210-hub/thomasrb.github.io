@@ -1,0 +1,96 @@
+---
+layout: default
+title: Lexicon
+permalink: /lexicon/
+description: An experimental tool for exploring vocabulary and lexical difficulty.
+---
+
+<section class="page-intro">
+    <p>PROJECT 01 / COMPUTATIONAL LINGUISTICS</p>
+    <h1>Lexicon.</h1>
+    <p>
+        An experimental language analyser exploring vocabulary,
+        word frequency, syllable complexity and lexical difficulty.
+    </p>
+</section>
+
+<section class="lexicon-app">
+
+    <div class="lexicon-heading">
+        <h2>Explore a text.</h2>
+        <p>Paste an English passage below to begin analysing its vocabulary.</p>
+    </div>
+
+    <label for="lexicon-input">Your text</label>
+
+    <textarea
+        id="lexicon-input"
+        placeholder="Paste or type your text here..."
+        rows="10"
+    ></textarea>
+
+    <div class="lexicon-controls">
+        <button id="analyse-button" type="button">
+            Analyse text →
+        </button>
+        <button id="clear-button" type="button">
+            Clear
+        </button>
+    </div>
+
+    <p id="lexicon-status" aria-live="polite">
+        Ready to analyse.
+    </p>
+
+    <div id="lexicon-results" hidden>
+
+        <div class="lexicon-stat-grid">
+
+            <div class="lexicon-stat">
+                <span>01 / TOTAL WORDS</span>
+                <strong id="total-words">0</strong>
+            </div>
+
+            <div class="lexicon-stat">
+                <span>02 / UNIQUE WORDS</span>
+                <strong id="unique-words">0</strong>
+            </div>
+
+            <div class="lexicon-stat">
+                <span>03 / AVG. WORD LENGTH</span>
+                <strong id="average-length">0</strong>
+            </div>
+
+        </div>
+
+        <div class="lexicon-result-section">
+            <h2>Word difficulty</h2>
+            <p>Words ranked by the experimental difficulty score.</p>
+
+            <div class="lexicon-table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Word</th>
+                            <th>Syllables</th>
+                            <th>Length</th>
+                            <th>Frequency</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="difficulty-results"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="lexicon-result-section">
+            <h2>Rarest words</h2>
+            <ul id="rare-results"></ul>
+        </div>
+
+    </div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.27.7/full/pyodide.js"></script>
+<script src="{{ '/assets/js/lexicon.js' | relative_url }}?v=2"></script>
