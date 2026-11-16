@@ -512,3 +512,265 @@ footer {
         padding: 20px;
     }
 }
+
+/* =========================================
+   ENGLISH LEVEL TEST
+========================================= */
+
+.level-test-app {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.level-test-header {
+    margin-bottom: 40px;
+}
+
+.level-test-category {
+    color: #F20B83;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.level-test-header h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: #142B78;
+    margin: 10px 0;
+}
+
+.level-test-panel {
+    background: #fff;
+    border: 2px solid #142B78;
+    padding: 35px;
+    margin-bottom: 30px;
+}
+
+.level-test-panel h2 {
+    color: #142B78;
+}
+
+.level-test-information {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.level-test-information div,
+.level-result-statistics div {
+    background: #f3f3f3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.level-test-information strong {
+    font-size: 1.8rem;
+    color: #F20B83;
+}
+
+.level-test-information span,
+.level-result-statistics span {
+    font-size: 0.85rem;
+}
+
+.level-test-instructions,
+.level-test-disclaimer {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.level-test-button {
+    background: #F20B83;
+    color: white;
+    border: 2px solid #F20B83;
+    padding: 13px 24px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.level-test-button:hover {
+    background: #142B78;
+    border-color: #142B78;
+}
+
+.level-test-button.secondary {
+    background: white;
+    color: #142B78;
+    border-color: #142B78;
+}
+
+.level-test-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.test-progress {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+#question-level {
+    color: #F20B83;
+}
+
+.test-progress-track,
+.level-score-track,
+.community-score-track {
+    height: 10px;
+    background: #e5e5e5;
+    overflow: hidden;
+}
+
+#test-progress-bar {
+    height: 100%;
+    width: 0;
+    background: #F20B83;
+    transition: width 0.2s ease;
+}
+
+#question-container {
+    margin: 35px 0;
+}
+
+#question-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+.question-options {
+    display: grid;
+    gap: 12px;
+}
+
+.question-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.question-option:hover {
+    border-color: #F20B83;
+    background: #fff5fa;
+}
+
+.question-option input {
+    accent-color: #F20B83;
+}
+
+.test-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.level-result-summary {
+    background: #142B78;
+    color: white;
+    padding: 30px;
+    margin: 25px 0;
+}
+
+.level-result-summary span {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #E8BD27;
+}
+
+.level-result-statistics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.level-result-statistics strong {
+    font-size: 1.8rem;
+    color: #142B78;
+}
+
+.level-score-row,
+.community-score-row {
+    display: grid;
+    grid-template-columns: 45px 1fr 90px;
+    align-items: center;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.level-score-fill {
+    height: 100%;
+    background: #F20B83;
+}
+
+.community-score-fill {
+    height: 100%;
+    background: #356B45;
+}
+
+.level-score-row span,
+.community-score-row span {
+    text-align: right;
+    font-size: 0.85rem;
+}
+
+.level-test-disclaimer {
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+#community-results {
+    border-top: 2px solid #142B78;
+    margin-top: 40px;
+    padding-top: 25px;
+}
+
+@media (max-width: 600px) {
+    .level-test-app {
+        padding: 12px;
+        margin: 25px auto;
+    }
+
+    .level-test-panel {
+        padding: 20px;
+    }
+
+    .level-test-information {
+        gap: 8px;
+    }
+
+    .level-test-information div {
+        padding: 12px;
+    }
+
+    .level-test-information strong {
+        font-size: 1.4rem;
+    }
+
+    .test-navigation {
+        flex-wrap: wrap;
+    }
+
+    .test-navigation button {
+        flex: 1;
+    }
+
+    .level-score-row,
+    .community-score-row {
+        grid-template-columns: 35px 1fr 75px;
+        gap: 8px;
+    }
+}

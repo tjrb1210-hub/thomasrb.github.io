@@ -1,0 +1,113 @@
+---
+layout: default
+title: English Level Test
+permalink: /level-test/
+description: An interactive English placement assessment covering CEFR levels A1 to C2.
+---
+
+<div class="level-test-app">
+
+    <header class="level-test-header">
+        <p class="level-test-category">LANGUAGE EDUCATION / ASSESSMENT</p>
+        <h1>English Level Test</h1>
+        <p>
+            An English placement assessment covering six levels
+            of the Common European Framework of Reference.
+        </p>
+    </header>
+
+    <section id="test-introduction" class="level-test-panel">
+        <h2>Discover your English level.</h2>
+        <p>
+            This assessment contains 40 multiple-choice questions,
+            progressing from A1 to C2.
+        </p>
+
+        <div class="level-test-information">
+            <div><strong>40</strong><span>Questions</span></div>
+            <div><strong>6</strong><span>CEFR levels</span></div>
+            <div><strong>40 min</strong><span>Estimated time</span></div>
+        </div>
+
+        <p class="level-test-instructions">
+            Answer independently without dictionaries, translators
+            or other assistance. Your results are indicative and
+            are not an official CEFR certification.
+        </p>
+
+        <button id="start-test" class="level-test-button">
+            Start assessment
+        </button>
+    </section>
+
+    <section id="test-questions" class="level-test-panel" hidden>
+        <div class="test-progress">
+            <span id="question-counter">Question 1 of 40</span>
+            <span id="question-level">A1</span>
+        </div>
+
+        <div class="test-progress-track">
+            <div id="test-progress-bar"></div>
+        </div>
+
+        <div id="question-container"></div>
+
+        <div class="test-navigation">
+            <button id="previous-question" class="level-test-button secondary">
+                Previous
+            </button>
+            <button id="next-question" class="level-test-button">
+                Next
+            </button>
+            <button id="submit-test" class="level-test-button" hidden>
+                Finish assessment
+            </button>
+        </div>
+    </section>
+
+    <section id="test-results" class="level-test-panel" hidden>
+        <p class="level-test-category">ASSESSMENT RESULTS</p>
+        <h2>Your English proficiency profile</h2>
+
+        <div class="level-result-summary">
+            <span id="placed-level">B1</span>
+            <p id="result-description"></p>
+        </div>
+
+        <div class="level-result-statistics">
+            <div>
+                <strong id="total-score">0/40</strong>
+                <span>Total score</span>
+            </div>
+            <div>
+                <strong id="total-percentage">0%</strong>
+                <span>Overall score</span>
+            </div>
+        </div>
+
+        <h3>Performance by CEFR level</h3>
+        <div id="level-score-chart"></div>
+
+        <h3>Detailed results</h3>
+        <div id="level-score-details"></div>
+
+        <p class="level-test-disclaimer">
+            This assessment provides an indicative estimate based
+            primarily on grammar and vocabulary. It does not
+            comprehensively assess speaking, listening, reading
+            or writing ability.
+        </p>
+
+        <div class="test-navigation">
+            <button id="print-results" class="level-test-button">
+                Print results
+            </button>
+            <button id="restart-test" class="level-test-button secondary">
+                Retake assessment
+            </button>
+        </div>
+    </section>
+
+</div>
+
+<script src="{{ '/assets/js/level-test.js' | relative_url }}?v=1"></script>
