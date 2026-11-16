@@ -1,86 +1,52 @@
+---
+layout: default
+title: Home
+---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A personal website exploring language, education, technology, research and society.">
-    <title>Thomas Rodriguez Brown</title>
-    <link rel="stylesheet" href="assets/css/custom.css?v=5">
-</head>
+<section class="intro">
+    <p>RESEARCH · LANGUAGE · TECHNOLOGY · SOCIETY</p>
 
-<body>
+    <h2>
+        Exploring ideas,<br>
+        making connections.
+    </h2>
 
-    <header>
-        <a class="site-title" href="index.html">Thomas Rodriguez Brown</a>
+    <p>
+        A personal space for projects, writing and explorations
+        across language, education, technology and society.
+    </p>
+</section>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="/projects/">Projects</a>
-            <a href="/writing/">Writing</a>
-            <a href="/classroom/">Classroom</a>
-            <a href="/interests/">Interests</a>
-            <a href="/learning-log/">Learning Log</a>
-            <a href="/about/">About</a>
-        </nav>
-    </header>
+<section class="home-grid">
 
-    <main>
+    <a href="{{ '/projects/' | relative_url }}" class="home-tile blue">
+        <span>01 / PROJECTS</span>
+        <h3>Things I've made.</h3>
+    </a>
 
-        <section class="intro">
-            <p>RESEARCH · LANGUAGE · TECHNOLOGY · SOCIETY</p>
+    <a href="{{ '/writing/' | relative_url }}" class="home-tile pink">
+        <span>02 / WRITING</span>
+        <h3>Things I've written.</h3>
+    </a>
 
-            <h2>
-                Exploring ideas,<br>
-                making connections.
-            </h2>
+    <a href="{{ '/classroom/' | relative_url }}" class="home-tile yellow">
+        <span>03 / CLASSROOM</span>
+        <h3>Ideas for teaching.</h3>
+    </a>
 
-            <p>
-                A personal space for projects, writing and explorations
-                across language, education, technology and society.
-            </p>
-        </section>
+    <a href="{{ '/interests/' | relative_url }}" class="home-tile green">
+        <span>04 / INTERESTS</span>
+        <h3>Things I'm exploring.</h3>
+    </a>
 
-        <section class="home-grid">
+    <a href="{{ '/learning-log/' | relative_url }}" class="home-tile pink">
+        <span>05 / LEARNING LOG</span>
+        <h3>Things I'm learning.</h3>
+    </a>
 
-            <a href="/projects/" class="home-tile blue">
-                <span>01 / PROJECTS</span>
-                <h3>Things I've made.</h3>
-            </a>
+    <a href="{{ '/about/' | relative_url }}" class="home-tile blue">
+        <span>06 / ABOUT</span>
+        <h3>A little about me.</h3>
+    </a>
 
-            <a href="/writing/" class="home-tile pink">
-                <span>02 / WRITING</span>
-                <h3>Things I've written.</h3>
-            </a>
-
-            <a href="/classroom/" class="home-tile yellow">
-                <span>03 / CLASSROOM</span>
-                <h3>Ideas for teaching.</h3>
-            </a>
-
-            <a href="/interests/" class="home-tile green">
-                <span>04 / INTERESTS</span>
-                <h3>Things I'm exploring.</h3>
-            </a>
-
-            <a href="/learning-log/" class="home-tile pink">
-                <span>05 / LEARNING LOG</span>
-                <h3>Things I'm learning.</h3>
-            </a>
-
-            <a href="/about/" class="home-tile blue">
-                <span>06 / ABOUT</span>
-                <h3>A little about me.</h3>
-            </a>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <p>Thomas Rodriguez Brown · 2026</p>
-        <p>Language, ideas and other inquiries.</p>
-    </footer>
-
-</body>
-</html>
+</section>

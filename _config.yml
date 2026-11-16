@@ -3,7 +3,7 @@ title: "Thomas Rodriguez Brown"
 description: "Projects, writing and explorations across language, education, technology and society."
 
 url: "https://tjrb1210-hub.github.io"
-baseurl: ""
+baseurl: "/thomasrb.github.io"
 
 markdown: kramdown
 permalink: /:categories/:title/
